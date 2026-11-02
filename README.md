@@ -47,3 +47,72 @@ The analysis includes:
 The cleaned dataset is saved as:
 
 `cleaned_titanic_dataset.csv`
+
+# Titanic Survival Prediction API
+
+## Project Overview
+An end-to-end Machine Learning application that predicts
+Titanic passenger survival using Python and Flask.
+
+## Technologies
+- Python
+- Pandas and NumPy
+- Scikit-learn
+- Flask
+- Joblib
+- REST API
+- Render
+
+## Machine Learning Workflow
+1. Load Titanic dataset.
+2. Perform data preprocessing.
+3. Train Logistic Regression and Random Forest.
+4. Evaluate model performance.
+5. Select the best model based on F1-score.
+6. Serialize the complete pipeline using Joblib.
+7. Build a Flask prediction API.
+8. Test API endpoints.
+9. Deploy the application.
+
+## How to Run
+
+Install dependencies:
+
+pip install -r requirements.txt
+
+Train model:
+
+python train_model.py
+
+Start API:
+
+python app.py
+
+## API Endpoints
+
+GET /
+GET /health
+POST /predict
+
+## Prediction Input
+
+{
+  "Pclass": 3,
+  "Sex": "male",
+  "Age": 25,
+  "SibSp": 0,
+  "Parch": 0,
+  "Fare": 7.25,
+  "Embarked": "S"
+}
+
+## Model Evaluation
+The models are compared using:
+- Accuracy
+- Precision
+- Recall
+- F1-score
+- ROC-AUC
+
+## Deployment
+(http://127.0.0.1:5000/)
